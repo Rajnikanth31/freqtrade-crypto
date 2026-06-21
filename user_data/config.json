@@ -1,0 +1,67 @@
+{
+    "max_open_trades": 1,
+    "stake_currency": "USDT",
+    "stake_amount": "unlimited",
+    "amend_last_stake_amount": true,
+    "tradable_balance_ratio": 0.99,
+    "available_capital": 5000,
+    "dry_run": true,
+    "dry_run_wallet": 5000,
+    "timeframe": "1h",
+    "position_adjustment_enable": false,
+    "minimal_roi": {
+        "0": 0.05
+    },
+    "stoploss": -0.02,
+    "unfilledtimeout": {
+        "entry": 10,
+        "exit": 30,
+        "unit": "minutes"
+    },
+    "entry_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1
+    },
+    "exchange": {
+        "name": "binance",
+        "sandbox": false,
+        "key": "",
+        "secret": "",
+        "pair_whitelist": [
+            "BTC/USDT"
+        ],
+        "pair_blacklist": [
+            "COCOS/USDT"
+        ]
+    },
+    "edge": {
+        "enabled": false,
+        "process_throttle_secs": 3600,
+        "calculate_since_number_of_days": 7,
+        "allowed_risk": 0.01,
+        "stoploss_range_min": -0.01,
+        "stoploss_range_max": -0.1,
+        "stoploss_range_step": -0.01,
+        "minimum_winrate": 0.60,
+        "minimum_expectancy": 0.20,
+        "min_trade_number": 10,
+        "max_trade_duration_minute": 1440,
+        "remove_pumps": false
+    },
+    "bot_name": "freqtrade_momentum_bot",
+    "initial_state": "running",
+    "force_entry_enable": false,
+    "internals": {
+        "process_throttle_secs": 5
+    }
+}
